@@ -7,7 +7,7 @@
     $db = $utils->getDatabaseConnection();
 
     $db->connect();
-    $db->executeCommand("select * from Usuarios");
+    $db->executeCommand("select * from usuarios_poo ");
     while($tbl = $db->getNextResultSetPosition())
         echo $tbl["usuario"]."<BR>";
     $db->disconnect();

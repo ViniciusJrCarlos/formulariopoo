@@ -1,7 +1,7 @@
 <?php
-    include_once("MySQL.php");
-    include_once("Utils.php");
-    include_once("Usuario.php");
+    include_once("/OpenConexaoClass.php"); //exemplo do livro bancodedados.php
+    include_once("/Utils.php");
+    include_once("/usuarios.php");
 
 
     if(isset($_REQUEST["action"]) && $_REQUEST["action"] == "createUser")
@@ -14,7 +14,7 @@
         $database = $utils->getDatabaseConnection();
         $database->connect();
 
-        $database->executeCommand("SELECT * FROM USUARIOS_POO WHERE USERNAME = '".$_POST["CAMPO_NOMEUSUARIO"]."'");
+        $database->executeCommand("SELECT * FROM usuarios_poo  WHERE USERNAME = '".$_POST["CAMPO_NOMEUSUARIO"]."'");
 
         $qtdOfSameUserName = $database->getAffectedRows();
 
@@ -63,7 +63,7 @@
 
             //salva o registro no banco de dados
 
-            $sql = "INSERT INTO USUARIOS_POO (FULLNAME, USERNAME, EMAIL, BIRTHDAY, SEX, PASSWORD_HASH) VALUES 
+            $sql = "INSERT INTO usuarios_poo (FULLNAME, USERNAME, EMAIL, BIRTHDAY, SEX, PASSWORD_HASH) VALUES 
             (
                 '".$newUser->getFullName()."',
                 '".$newUser->getUserName()."',
