@@ -1,8 +1,8 @@
 <?php
-    include_once("/OpenConexaoClass.php"); //exemplo do livro bancodedados.php
-    include_once("/Utils.php");
-    include_once("/usuarios.php");
-
+    include_once("../OpenConexaoClass.php"); //exemplo do livro bancodedados.php
+    include_once("../Utils.php");
+    include_once("../usuariosClass.php");
+    //include_once("/usuarios.php")
 
     if(isset($_REQUEST["action"]) && $_REQUEST["action"] == "createUser")
     {

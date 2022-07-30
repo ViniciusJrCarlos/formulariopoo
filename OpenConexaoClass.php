@@ -20,16 +20,17 @@
         {
 
             $address = $this->server;
-            if($this-> != "")
+            if($this->port != "")
             {
 
                 $address .= ":".$this->port;
 
+           
+
+                $this->connection = mysqli_connect($address, $this->user, $this->password, $this->db)
+                or die ('Não foi possivel conectar: '. mysqli_error($this->connection));
+                
             }
-
-            $this->connection = mysqli_connect($address, $this->user, $this->password, $this->db)
-            or die ('Não foi possivel conectar: '. mysqli_error($this->connection));
-
 
 
         }
