@@ -70,10 +70,11 @@ Class Usuario
     public function setBirthday($day, $month, $year)
     {
 
-        if(!checkdate($month, $day, $year))
+        if(!checkdate($day, $month, $year))
         return FALSE;
 
-        $this->Birthday = mktime(0, 0, 0, $month, $day, $year);
+        $this->birthday = mktime(0, 0, 0, $day, $month, $year);
+        //$this->birthday = $day, $month, $year;
         return TRUE;
 
     }
@@ -81,7 +82,7 @@ Class Usuario
     public function setSex($sex)
     {
 
-        if($sex != "masculino" && $sex != "feminino")
+        if($sex != "M" && $sex != "F")
         return FALSE;
 
         $this->sex = $sex;

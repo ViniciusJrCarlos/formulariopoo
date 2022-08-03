@@ -35,6 +35,8 @@ function validaUsuario(formUser)
     }else{
 
         formUser.submit();
+
+      
         
     }
     return FALSE;

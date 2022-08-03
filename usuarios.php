@@ -68,7 +68,8 @@
                 '".$newUser->getFullName()."',
                 '".$newUser->getUserName()."',
                 '".$newUser->getEmail()."',
-                '".date("Y-m-d", $newUser->getBirthday())."',
+                '".date("d-m-Y", $newUser->getBirthday())."',
+                   
                 '".$newUser->getSex()."',
                 '".$newUser->getPasswordHash()."'
 

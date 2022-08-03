@@ -17,12 +17,12 @@
         <br><br>
         E-Mail: <input type="text" name="CAMPO_EMAIL" value="<?php if(isset($_POST['CAMPO_EMAIL'])){echo $_POST['CAMPO_EMAIL'];}?>" />
         <br><br>
-        Data de Nascimento: <input type="text" name="CAMPO_NASCIMENTODIA" value="<?php if(isset($_POST['CAMPO_NASCIMENTODIA'])){echo $_POST['CAMPO_NASCIMENTODIA'];}?>" size="1" />&nbsp;
-        <input type="text" name="CAMPO_NASCIMENTOMES" value="<?php if(isset($_POST['CAMPO_NASCIMENTOMES'])){echo $_POST['CAMPO_NASCIMENTOMES'];}?>" size="1"  />&nbsp;
-        <input type="text" name="CAMPO_NASCIMENTOANO" value="<?php if(isset($_POST['CAMPO_NASCIMENTOANO'])){echo $_POST['CAMPO_NASCIMENTOANO'];}?>" size="2" />
+        Data de Nascimento: <input type="text" name="CAMPO_NASCIMENTODIA" value="<?php if(isset($_POST['CAMPO_NASCIMENTODIA'])){echo $_POST['CAMPO_NASCIMENTODIA'];}?>" size="20" />&nbsp;
+        <input type="text" name="CAMPO_NASCIMENTOMES" value="<?php if(isset($_POST['CAMPO_NASCIMENTOMES'])){echo $_POST['CAMPO_NASCIMENTOMES'];}?>" size="10"  />&nbsp;
+        <input type="text" name="CAMPO_NASCIMENTOANO" value="<?php if(isset($_POST['CAMPO_NASCIMENTOANO'])){echo $_POST['CAMPO_NASCIMENTOANO'];}?>" size="20" />
         <br><br>
-              Sexo: <input type="radio" name="CAMPO_SEXO" value="masculino" <?php if(isset($_POST['CAMPO_SEXO']) == "masculino") {echo "checked";} ?> >Masculino
-              &nbsp;<input type="radio" name="CAMPO_SEXO" value="feminino" <?php if(isset($_POST['CAMPO_SEXO']) == "feminino") {echo "checked";} ?> >Feminino
+              Sexo: <input type="radio" name="CAMPO_SEXO" value="M" <?php if(isset($_POST['CAMPO_SEXO']) == "M") {echo "checked";} ?> >Masculino
+              &nbsp;<input type="radio" name="CAMPO_SEXO" value="F" <?php if(isset($_POST['CAMPO_SEXO']) == "F") {echo "checked";} ?> >Feminino
         <br><br>
         Senha: <input type="password" name="CAMPO_SENHA" value="" >
         <br><br>
