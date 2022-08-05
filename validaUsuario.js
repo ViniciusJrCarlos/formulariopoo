@@ -35,8 +35,8 @@ function validaUsuario(formUser)
     }else{
 
         formUser.submit();
-
-      
+        alert("cadastrado com sucesso!");
+        //return FALSE;
         
     }
     return FALSE;

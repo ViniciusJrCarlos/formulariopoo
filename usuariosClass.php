@@ -70,10 +70,10 @@ Class Usuario
     public function setBirthday($day, $month, $year)
     {
 
-        if(!checkdate($day, $month, $year))
+        if(!checkdate($month, $day,  $year))
         return FALSE;
 
-        $this->birthday = mktime(0, 0, 0, $day, $month, $year);
+        $this->birthday = mktime(0, 0, 0, $month, $day,  $year);
         //$this->birthday = $day, $month, $year;
         return TRUE;
 

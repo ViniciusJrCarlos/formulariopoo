@@ -2,7 +2,7 @@
 
     include_once("conexao.php");
 
-    class OpenConexaoClass extends Conexao
+    class MySQL extends Conexao
     {
 
         public function setConfig($server, $port, $user, $password, $db)
@@ -21,29 +21,29 @@
 
             $address = $this->server;
             if($this->port != "")
-            {
+            
 
-                $address .= ":".$this->port;
+                $address .= ":" .$this->port;
 
            
 
                 $this->connection = mysqli_connect($address, $this->user, $this->password, $this->db)
                 or die ('Não foi possivel conectar: '. mysqli_error($this->connection));
                 
-            }
-
+            
 
         }
+        
 
         public function disconnect()
         {
 
             if($this->connection)
-            {
+            
 
                 mysqli_close($this->connection);
 
-            }
+            
 
         }
 
@@ -51,18 +51,18 @@
         {
 
             if($this->connection)
-            {
+            
 
                 $this->resultSet = mysqli_query($this->connection, $sql);
 
 
-            }
+            
             else
-            {
+            
 
                 return FALSE;
 
-            }
+            
 
         }
 
@@ -85,6 +85,7 @@
             return mysqli_error($this->connection);
 
         }
+    
 
     }
 

@@ -51,9 +51,9 @@
         $dbTempPassword = $configVars["DB_PASSWORD"];
         $dbTempName = $configVars["DB_NAME"];
         $dbTemp = null;
-        $dbTempType = "MYSQL";
+        $dbTempType = "MySQL";
 
-        if($dbTempType == "MYSQL")
+        if($dbTempType == "MySQL")
         
             $dbTemp = new MySQL();
 
@@ -65,7 +65,7 @@
 
         if($dbTemp != null)
             $dbTemp->setConfig($dbTempAddress, $dbTempPort, $dbTempUser, $dbTempPassword, $dbTempName);
-
+            //abstract public function setConfig($server, $port, $user, $password, $db);
         return $dbTemp;
 
         

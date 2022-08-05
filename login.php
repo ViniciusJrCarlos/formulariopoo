@@ -1,3 +1,9 @@
+ <?php
+
+    include_once("usuarios.php");
+    //$dbTemp = new MySQLI();
+ ?>
+ 
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +35,7 @@
         Repita a Senha: <input type="password" name="CAMPO_SENHAREPETIDA" value="" >
         <br><br>
         <input type="RESET" value="Limpar">&nbsp;
-        <input type="button" onClick="validaUsuario(document.forms['formUser']); return FALSE;" value="Cadastrar">
+        <input type="submit" onClick="validaUsuario(document.forms['formUser']); return FALSE;" value="Cadastrar">
 
     </form>
 </body>
